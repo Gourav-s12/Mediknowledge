@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Know your medicine</title>
+  <meta content="know your medicine" name="description">
+  <meta content="medicine, knowledge" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/health-health.png" rel="icon">
+  <link href="assets/img/Heath_profile.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--  Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body onload="myFunctionOnLoad()">
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="fa fa-bars mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/health-health.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">MediKnowledge</a></h1>
+        <div class="social-links mt-3 text-center">
+          
+          <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/gourav.sarkar.79677/" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/Gourav-s12" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/gourav-sarkar-0b0705223/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul data-aos="fade-left">
+          <li><a href="#hero" class="nav-link scrollto active"><i class="fa fa-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="fa fa-user"></i> <span>About</span></a></li>
+          <li><a href="#Medisearch" class="nav-link scrollto"><i class="fa fa-medkit"></i> <span>Medicine</span></a></li>
+          <li><a href="#mediDetails" class="nav-link scrollto"><i class="fa fa-search"></i> <span>Details</span></a></li>
+          <li><a href="#QnA" class="nav-link scrollto"><i class="fa fa-question-circle"></i> <span>QnA</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="fa fa-phone"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>MediKnowledge</h1>
+      <p><br>
+        <span class="typed" data-typed-items="Know your medicine"></span>
+        <br>
+      </p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p> this is a website to know more about medicine and gain knowledge about what are you taking everyday.
+             </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/doctor.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Why this website?</h3>
+            <p class="fst-italic">
+              This website gives a quick inside about your medicine-based question with the knowledge of many medicine.
+            </p>
+            <p>
+              The information includes a Introduction, Purpose, When to take , Side-effects , Effective-ness . Website has feature to store, view 
+              and search medicine. And very impotantly, A smart AI is waiting for your every question.
+            </p>
+            <p class="fst-italic">
+              Due to there are many medicine in this world, Some may be not listed in this website (database & QnA ).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Section -->
+
+ <!-- =======Medisearch Section ======= -->
+ <section id="Medisearch" class="Medisearch">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Medicine</h2>
+      </div>
+
+      <div class="mediFill" style="margin:auto;max-width:250px">
+        <input type="text" placeholder="use fillter" name="search2" id="searchFill" onChange="makeArrFill()">
+      </div> 
+      <div style="margin:auto;max-width:300px">
+        <p> (Use filler to short-list your medicine) </p>
+      </div>  
+
+    <div class="row" id="ListMedi">
+      
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-lg-12 d-flex justify-content-center" id="Medisearch-flters">
+        <div class="btn-group">
+          <button onclick="getMediArr(1)"> &lt- </button>
+          
+          <button onclick="getMediArr(2)"> -&gt </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Medisearch Section -->
+
+<!-- ======= mediDetails Section ======= -->
+<section id="mediDetails" class="mediDetails section-bg">
+  <div class="container">
+
+    <!--<form class="example" action="/action_page.php" style="margin:auto;max-width:400px">-->
+      <div class="mediNmae" style="margin:auto;max-width:350px">
+        <input type="text" placeholder="Search.." name="search2" id="searchMedi">
+        <button onclick="getDetailsMedi('0')"><i class="fa fa-search"></i></button>
+      </div>
+      <div style="margin:auto;max-width:300px">
+      <p id="errMedi"></p>
+      </div>
+      
+    <div class="section-title" data-aos="fade-in">
+      <br><br><h2 id="nameMedi"></h2> <!--Medicine name-->
+      <h6>USE</h6>
+      <p id="useMedi"></p>
+      <h6>INTRODUCTION</h6>
+      <p id="introMedi"></p>
+      <h6>WARNING</h6>
+      <p id="warnMedi"></p>
+      <h6>SIDE EFFECTS</h6>
+      <p id="sideEffectMedi"></p>
+      <h6>HOW TO TAKE</h6>
+      <p id="takeMedi"></p>
+      <h6>IF MISS A DOSE</h6>
+      <p id="ifMissMedi"></p>
+    </div>
+
+  </div>
+</section><!-- End mediDetails Section -->
+
+    <!-- ======= QnA Section ======= -->
+    <section id="QnA" class="QnA section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-right">
+          <h2>QnA</h2>
+          <p>Have a query? ask this bot , he is online always.</p><br>
+          <h6>You can ask many type of question - </h6>
+          <p> does it mean to take medicines on an empty stomach?</p>
+          <p> What is food poisoning? </p>
+          <p> What antibiotics kill Covid-19 (coronavirus)?</p>
+          <p> Popular Drugs for Pain </p>
+        </div>
+        <div style="border: 3px;">
+          <iframe src='https://webchat.botframework.com/embed/mediknowqnaservice-bot?s=Sny7BHdq0_8.nqvQZYsjuDtJAb-GFHcpizsUmUE0o1UFZcm7TWkQUCM' style='min-width: 200px; width: 100%; min-height: 500px;' data-aos="fade-up"></iframe>
+       </div>
+        <div class="row QnA-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="rating">USABLITY <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="rating">AVALIABLITY <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="rating">RELIABILITY <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="rating">UNDERSTANDABILITY <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End QnA Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+         
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="fa fa-map-marker"></i>
+                <h4>Location:</h4>
+                <p>Kolkata , West bengal , India</p>
+              </div>
+
+              <div class="email">
+                <i class="fa fa-envelope"></i>
+                <h4>Email:</h4>
+                <p>sarkargourav12@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="fa fa-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 97480 95954</p>
+              </div>
+              
+            </div>
+              
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <p><br><br><br>I hope you learn something new.
+              <br><br><br>Thank you for visiting , Have a nice day.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-angle-double-up"></i></a>
+
+  <!-- Vendor JS Files-->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+ <!-- JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/function.js"></script>
+  
+
+</body>
+
+</html>
