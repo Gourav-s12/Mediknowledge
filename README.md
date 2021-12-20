@@ -1,6 +1,7 @@
 # MediKnowledge - Know your Medicine
 This is a code of a website name Mediknowledge . This repo contains the total code including html, css, js file.
 Website is for search about medicine and get info to know them better. 
+#### DEMO URL: https://mediknowledge.azurewebsites.net/
 
 ![image](https://user-images.githubusercontent.com/82956033/146728613-e324f926-faa3-40a4-b3d0-959990754016.png)
 ### A user friendly website to know your medicine
