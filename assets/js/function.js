@@ -50,13 +50,13 @@ function getMediArr(para) {
         }
         
     }else{
-        startMedi = startMedi - 18 ;
+        startMedi = startMedi - 24 ;
         if(startMedi < 0){
             startMedi = 0 ;
         }
     }
 
-    endMedi = startMedi +18 ;
+    endMedi = startMedi +24 ;
 
     if(arrMedi.length < endMedi){
         endMedi = arrMedi.length;
@@ -74,8 +74,8 @@ function getDetailsMedi(para){
     if(para == "0"){
         para = document.getElementById("searchMedi").value;
         para= para.trim();
-        if(para == ''){
-            document.getElementById("errMedi").innerHTML= 'please enter a name';
+        if(para == '' || para.includes(';')){
+            document.getElementById("errMedi").innerHTML= 'please enter a vaild name';
             return;
         }
     }
