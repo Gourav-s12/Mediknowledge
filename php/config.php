@@ -1,9 +1,9 @@
 <?php
 
-$host = "mediknowservermysql.mysql.database.azure.com"; /* Host name */
-$user = "mediknowAdmin"; /* User */
-$password = "adminMK1234"; /* Password */
-$dbname = "medikschema"; /* Database name */
+$host = "Host name"; /* Host name */
+$user = "User"; /* User */
+$password = "Password"; /* Password */
+$dbname = "Database name"; /* Database name */
 
 $conn = mysqli_init(); 
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL); 
