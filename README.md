@@ -1,6 +1,8 @@
 # MediKnowledge - Know your Medicine
 This is a code of a website name Mediknowledge . This repo contains the total code including html, css, js file.
-Website is for search about medicine and get info to know them better. 
+Website is for search about medicine and get info to know them better.
+This is the code to host the website to azure using cloud technology.
+
 #### DEMO URL: https://mediknowledge.azurewebsites.net/
 
 ![image](https://user-images.githubusercontent.com/82956033/146728613-e324f926-faa3-40a4-b3d0-959990754016.png)
@@ -17,7 +19,6 @@ Website is for search about medicine and get info to know them better.
 - USE
 - INTRODUCTION
 - WARNING
-- SIDE EFFECTS
 - HOW TO TAKE
 - IF MISS A DOSE
 
